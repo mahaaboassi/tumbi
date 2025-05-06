@@ -1,0 +1,441 @@
+@import url("./App.css");
+/* Navbar */
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  /* background-color: red;   */
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul{
+  display: flex;
+  font-family: var(--parisian);
+  font-size: 2rem;
+}
+.navbar ul li{
+  cursor: pointer;
+  transition: 0.3s;
+}
+.background-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  z-index: -1;
+  height: 90px;
+}
+/* Hero Section */
+.Hero-section{
+  height: 600px;
+  position: relative;
+
+}
+.Hero-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.512);
+
+}
+.Hero-section img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+.group{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Categories */
+.category{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-cat{
+  border: 1px solid var(--main-color);
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+  border-radius: 10px;
+  animation: upDiv 0.5s linear forwards;
+  text-transform: capitalize;
+}
+.cloudy-container{
+  position: relative;
+  margin-top: -40px;
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, rgb(7 7 7), #000000 70%);
+  filter: blur(20px);
+  /* opacity: 0.4; */
+  /* border-radius: 50%; */
+
+}
+
+@keyframes upDiv {
+  from{
+    transform: translateY(30px);
+  }to{
+    transform: translateY(0px);
+  }
+}
+
+/* About  */
+.about{
+  display: flex;
+
+}
+
+.about img{
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Heading */
+.heading h3{
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+  text-transform: uppercase;
+}
+.heading h2{
+  font-family: var(--mogen);
+  font-size: var(--font-size-m);
+  text-transform: capitalize;
+}
+.align{
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--main-color);
+}
+.center-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.last-arrow, .next-arrow{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.last-arrow:hover, .next-arrow:hover{
+  background-color: var(--light-color);
+}
+.last-arrow:hover path, .next-arrow:hover path{
+  fill: var(--green-color);
+}
+.last-arrow{
+  transform: rotate(-180deg);
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  display: none;
+}
+/* Rooms */
+.card img{
+  width: 100%;
+  border-radius: 8px;
+}
+.card h4{
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+}
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Fill */
+.fill{
+  background: url("./assets/images/banner2.jpg");
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.fill::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 2;
+}
+.fill h3{
+  font-family: var(--parisian);
+  font-size: var(--font-size-m);
+}
+.fill h4{
+  font-family: var(--mogen);
+  font-size: var(--font-size-m);
+}
+.main-color{
+  color: var(--main-color);
+}
+
+.line{
+  position: absolute;
+  height: 100%;
+  width: 1px !important;
+  z-index: 3;
+  background-color: rgba(248, 246, 246, 0.373);
+  animation: move 4s infinite linear;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(-4px); /* Slight left movement */
+    }
+    50% {
+        transform: translate(4px); /* Move right */
+    }
+    100% {
+        transform: translate(-4px); /* Back to left */
+    }
+}
+.container-fill{
+  position: relative;
+  overflow: hidden;
+
+}
+.fill-content{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resturant,.resturant-reverse{
+  display: flex;
+}
+.resturant img, .resturant-reverse img{
+  object-fit: contain;
+}
+.resturant h2, .resturant-reverse h2{
+  font-family: var(--parisian);
+  font-size: var(--font-size-l);
+}
+.explore{
+  font-family: var(--parisian);
+  color: var(--main-color);
+  font-size: var(--font-size-s);
+  text-transform: capitalize;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.explore path{
+  fill:  var(--main-color);
+}
+.explore:hover{
+  color: var(--light-color);
+  gap:10px
+}
+.explore:hover path{
+  fill:  var(--light-color);
+}
+/* Signature section */
+.container-sign{
+  display: flex;
+}
+.card-sign{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-position: cover; */
+    transition: 0.3s;
+  
+}
+.card-sign::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.3) 100%);
+}
+.content-sign{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+}
+.content-sign h4{
+  font-family: var(--mogen);
+  color: var(--main-color);
+  font-size: var(--font-size-m);
+}
+.content-sign ul{
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+}
+.card-sign:has(.content-sign:hover) {
+  transform: translateY(-30px);
+}
+
+/* Button */
+p{
+  font-size: var(--font-size-xs);
+}
+button{
+  background-color: var(--green-color );
+  font-family: var(--parisian);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: capitalize;
+  width: fit-content;
+}
+button:hover{
+  background-color: var(--light-color );
+  color: var(--green-color);
+}
+
+@media (max-width:1200px) {
+  /* Heading */
+  .heading h3{
+    font-size: var(--font-size-xs);
+  }
+  .heading h2{
+    font-size: var(--font-size-s);
+  }
+  p{
+    font-size: var(--font-size-xxs);
+  }
+  /* Category */
+  .card-cat{
+    font-size: var(--font-size-xs);
+  }
+  .card-sign{
+    height: 350px;
+  }
+  .content-sign h4{
+    font-size: var(--font-size-s);
+  }
+  .content-sign ul{
+    font-size: var(--font-size-xs);
+  }
+
+
+}
+
+@media (max-width:900px) {
+  
+  /* About */
+  .about{
+    flex-direction: column;
+
+  }
+  .fill h3{
+    font-family: var(--parisian);
+    font-size: var(--font-size-s);
+  }
+  .fill h4{
+    font-family: var(--mogen);
+    font-size: var(--font-size-s);
+  }
+  .content-sign ul{
+    font-size: var(--font-size-xxs);
+  }
+  .container-sign{
+    flex-direction: column;
+  }
+  .card-sign{
+    background-size: cover !important;
+    width: 100%;
+  }
+}
+@media (max-width:800px) {
+  .resturant{
+    flex-direction: column;
+  }
+  .resturant-reverse{
+    flex-direction: column-reverse;
+  }
+  
+}
+@media (max-width:600px) {
+
+  
+}
+@media (max-width:500px) {
+  /* Hero Section  */
+  .Hero-section{
+    height: 450px;
+  }
+  .fill h3{
+    font-family: var(--parisian);
+    font-size: var(--font-size-xs);
+  }
+  .fill h4{
+    font-family: var(--mogen);
+    font-size: var(--font-size-xs);
+  }
+  
+}
+@media (max-width:350px) {
+  
+  /* Category */
+  .category{
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+}
