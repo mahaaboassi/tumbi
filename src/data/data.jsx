@@ -1,13 +1,13 @@
-import room_1 from "../assets/images/room.jpg"
-import room_2 from "../assets/images/room2.jpg"
-import room_3 from "../assets/images/room3.jpg"
-import room_4 from "../assets/images/room4.jpg"
-import room_5 from "../assets/images/room5.jpg"
-import room_6 from "../assets/images/room6.jpg"
+import room_1 from "../assets/images/room.webp"
+import room_2 from "../assets/images/room2.webp"
+import room_3 from "../assets/images/room3.webp"
+import room_4 from "../assets/images/room4.webp"
+import room_5 from "../assets/images/room5.webp"
+import room_6 from "../assets/images/room6.webp"
 // Signature section Images
-import img_1 from "../assets/images/mind.png"
-import img_2 from "../assets/images/body.png"
-import img_3 from "../assets/images/soul.png"
+import img_1 from "../assets/images/mind.webp"
+import img_2 from "../assets/images/body.webp"
+import img_3 from "../assets/images/soul.webp"
 
 export const categories = [{
     name : "Luxury Accomadiation"

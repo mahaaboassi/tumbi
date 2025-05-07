@@ -1,19 +1,19 @@
 import Heading from "../components/heading"
-import img_1 from "../assets/images/gallery (1).jpg"
-import img_2 from "../assets/images/gallery (2).jpg"
-import img_3 from "../assets/images/gallery (3).jpg"
-import img_4 from "../assets/images/gallery (4).jpg"
-import img_5 from "../assets/images/gallery (5).jpg"
-import img_6 from "../assets/images/gallery (6).jpg"
-import img_7 from "../assets/images/gallery (7).jpg"
-import img_8 from "../assets/images/gallery (8).jpg"
+import img_1 from "../assets/images/gallery (1).webp"
+import img_2 from "../assets/images/gallery (2).webp"
+import img_3 from "../assets/images/gallery (3).webp"
+import img_4 from "../assets/images/gallery (4).webp"
+import img_5 from "../assets/images/gallery (5).webp"
+import img_6 from "../assets/images/gallery (6).webp"
+import img_7 from "../assets/images/gallery (7).webp"
+import img_8 from "../assets/images/gallery (8).webp"
 import { useState } from "react"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // core Swiper
 import 'swiper/css/navigation'; // optional modules
 
-import { Navigation , Autoplay } from 'swiper/modules';
+import { Navigation  } from 'swiper/modules';
 
 
 

@@ -40,10 +40,11 @@ const Footer = ()=>{
             <div className="lines">
                     {
                         [...Array(500)].map((_,idx)=>{
-                            const height = Math.floor(Math.random() * 60) + 800;
+                            const height = Math.floor(Math.random() * 60) + 300;
                             return<div style={{
                                 left: `${idx*80}px`,
-                                height : height
+                                height : height,
+                                bottom: 0,
                             }} className="line" key={`Lines_${idx}`}></div>
                         })
                     }
