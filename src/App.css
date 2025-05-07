@@ -352,6 +352,7 @@
   text-transform: capitalize;
   transition: 0.3s;
   cursor: pointer;
+  width: fit-content;
 }
 .explore path{
   fill:  var(--main-color);
@@ -440,8 +441,26 @@
 }
 
 
-
-
+/* Footer */
+footer{
+  display: flex;
+  font-family: var(--parisian);
+  font-size: var(--font-size-m);
+  overflow: hidden;
+}
+footer p{
+  font-size: var(--font-size-s);
+}
+.final-footer{
+  background-color: var(--main-color);
+  color: var(--light-color);
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+  text-align: center;
+}
+.first-small, .small{
+  display: none;
+}
 /* Button */
 p{
   font-size: var(--font-size-xs);
@@ -539,7 +558,17 @@ button:hover{
     .location ul{
       font-size: var(--font-size-xs);
     }
-
+    /* footer */
+    .logo-footer .big-logo{
+      width: 150px;
+      height: 150px;
+    }
+    footer h5{
+      font-size: var(--font-size-s);
+    }
+    footer p{
+      font-size: var(--font-size-xs);
+    }
 }
 
 @media (max-width:800px) {
@@ -562,6 +591,16 @@ button:hover{
   }
   .location iframe{
     min-height: 250px;
+  }
+  .first, .second , .third{
+    display: none;
+  }
+  .first-small, .small{
+    display: block;
+  }
+  .first-small{
+    display: flex;
+    justify-content: center;
   }
 }
 @media (max-width:500px) {
@@ -602,6 +641,13 @@ button:hover{
   .category{
     flex-direction: column;
     justify-content: center;
+  }
+  .small svg.big-logo{
+    width: 100px;
+    height: 100px;
+  }
+  .icons{
+    gap:5px
   }
  
 }
