@@ -45,7 +45,7 @@ const Location  = ()=>{
 
             </div>
             <div className="w-full">
-            <iframe title="Map of our hotel location"> src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.8158490741357!2d55.14137347567159!3d25.10809427776838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b8caeaccc0f%3A0x68a6b36d493fd874!2sTumbi%20West%20Palm%20Beach%20Hotel%20Dubai%2C%20Tapestry%20Collection%20by%20Hilton!5e0!3m2!1sen!2sae!4v1746601107397!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="Map of our hotel location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.8158490741357!2d55.14137347567159!3d25.10809427776838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b8caeaccc0f%3A0x68a6b36d493fd874!2sTumbi%20West%20Palm%20Beach%20Hotel%20Dubai%2C%20Tapestry%20Collection%20by%20Hilton!5e0!3m2!1sen!2sae!4v1746601107397!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>
