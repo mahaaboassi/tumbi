@@ -36,7 +36,7 @@ const HeroSection = ()=>{
     return(<div className="Hero-section">
         <img src={img} alt={"Tumbi hotels"} />
         <div className="group">
-            {group}
+            {/* {group} */}
         </div>
     </div>) 
 }

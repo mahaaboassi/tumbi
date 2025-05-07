@@ -119,3 +119,24 @@ export const dataSignature = [{
     children : ["Gratitude Grove suite","Grounded Serenity suite","Garden Of Healing suite"],
     img : img_3
 }]
+
+export const whatsNearby = [{
+    name : "Nakheel Mall",
+    value : "1 kilometer"
+},{
+    name : "The View at The Palm",
+    value : "1 kilometer"
+},{
+    name : "Skydive Dubai",
+    value : "2 kilometer"
+},{
+    name : "Emirates Golf Club",
+    value : "3 kilometer"
+},{
+    name : "Marina Beach",
+    value : "3 kilometer"
+},{
+    name : "Marina Walk",
+    value : "3 kilometer"
+}]
+export const airportInfo = []

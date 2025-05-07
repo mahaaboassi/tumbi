@@ -5,6 +5,7 @@ import Category from './sections/category'
 import Fill from './sections/fill'
 import Gallery from './sections/gallery'
 import HeroSection from './sections/hero'
+import Location from './sections/location'
 import Rooms from './sections/rooms'
 import Signature from './sections/signature'
 
@@ -20,6 +21,7 @@ function App() {
     <Fill/>
     <Signature/>
     <Gallery/>
+    <Location/>
     </>
   )
 }

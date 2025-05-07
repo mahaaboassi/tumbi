@@ -1,3 +1,7 @@
+import { useRef } from "react"
+import { useEffect } from "react"
+import { useState } from "react"
+
 const Navbar = ()=>{
     const data = [{
         name : "About",
@@ -12,6 +16,22 @@ const Navbar = ()=>{
         name : "Contact",
         link : ""
     },]
+    const [ isScroll , setIsScroll] = useState(false)
+    useEffect(()=>{
+        const handleScroll = () => {
+            if (window.scrollY > 80) {
+              setIsScroll(true); 
+            } else {
+              setIsScroll(false); 
+            }
+          };
+      
+        window.addEventListener('scroll', handleScroll);
+        // Cleanup the event listener on component unmount
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    },[])
     return(<div className="navbar px-5 sm:px-10 lg:px-24 py-5">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 81 81" fill="none">
@@ -26,9 +46,8 @@ const Navbar = ()=>{
                 <button>Book Now</button>
             </div>
         </div>
-        <div className="background-fixed">
-
-        </div>
+        {isScroll && <div className="background-fixed"></div>}
+        
     </div>)
 }
 export default Navbar
