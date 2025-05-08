@@ -40,7 +40,7 @@ const Gallery = () => {
     const lastSlider = ()=>{document.querySelector(".gallery .swiper-button-prev").click()}
     const nextSlider = ()=> {document.querySelector(".gallery .swiper-button-next").click()}
         
-    return(<div className="py-16 px-5 sm:px-10 lg:px-24 gallery">
+    return(<div id="gallery" className="py-16 px-5 sm:px-10 lg:px-24 gallery">
         <Heading isCenter={true} subTitle={"PHOTOS"} title={"Tumbi’s Gallery"} />
         {isOverlay && <div className="overlay-gallery ">
             <div onClick={()=>setIsOverlay(false)} className="close-icon">{close}</div>

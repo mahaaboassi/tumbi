@@ -1,7 +1,7 @@
 import img from "../assets/images/about.webp"
 import Heading from "../components/heading"
 const About = ()=>{
-    return (<div className="about gap-10 py-16 px-5 sm:px-10 lg:px-24 ">
+    return (<div id='about' className="about gap-10 py-16 px-5 sm:px-10 lg:px-24 ">
         <div className="w-full">
             <img src={img} alt="About" />
         </div>

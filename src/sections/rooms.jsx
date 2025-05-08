@@ -35,7 +35,7 @@ const Rooms = ()=>{
                   }}>     
                 {
                     dataRoom.map((e,idx)=>(<SwiperSlide key={`Rooms_Slider_${e.name}_${idx}`}>
-                        <div className={`content ml-6`} >
+                        <div className={`content`} >
                             <img src={e.img} alt={e.name} />
                             <div className="flex gap-1">{[1,2,3,4,5].map((_,i)=>(<div key={`Stars_${i}_${e.name}`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">

@@ -14,7 +14,7 @@ const Location  = ()=>{
     </defs>
     </svg>
     const [ changeInfo, setChangeInfo ] = useState(0)
-    return(<div className=" py-16 px-5 sm:px-10 lg:px-24">
+    return(<div id="location" className=" py-16 px-5 sm:px-10 lg:px-24">
         <Heading isCenter={true} title={"Location and transportation"} subTitle={"CONTACT"} />
         <div className="location gap-5 pt-16">
             <div className="w-full">

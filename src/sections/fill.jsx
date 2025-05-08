@@ -27,7 +27,7 @@ const Fill = ()=>{
                     <p>We know you will be enchanted with our themed suites, each tailored to your interests,  offering a range of lifestyle enhancements customized just for you.</p>
             </div>
             </div>
-            <div className="py-16 px-5 sm:px-10 lg:px-24">
+            <div id="dining" className="py-16 px-5 sm:px-10 lg:px-24">
                 <Heading isCenter={true} subTitle={"SERVICES"} title={"Dining and Drinks"} />
                 <div className="pt-16 resturant">
                     <div className="w-full flex justify-center">

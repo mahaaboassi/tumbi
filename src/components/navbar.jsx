@@ -5,16 +5,16 @@ import { useState } from "react"
 const Navbar = ()=>{
     const data = [{
         name : "About",
-        link : ""
+        link : "#about"
     },{
         name : "Dining",
-        link : ""
+        link : "#dining"
     },{
         name : "Gallery",
-        link : ""
+        link : "#gallery"
     },{
-        name : "Contact",
-        link : ""
+        name : "Location",
+        link : "#location"
     },]
     const [ isScroll , setIsScroll] = useState(false)
     useEffect(()=>{
@@ -40,7 +40,9 @@ const Navbar = ()=>{
         </div>
         <div className="flex items-center gap-4">
             <ul className="gap-4 ">
-                {data.map((e,idx)=><li key={`Navbar_Data_${e.name}_${idx}`} >{e.name}</li>)}
+                {data.map((e,idx)=><li key={`Navbar_Data_${e.name}_${idx}`} >
+                    <a href={e.link}>{e.name}</a>
+                </li>)}
             </ul>
             <div >
                 <button>Book Now</button>
