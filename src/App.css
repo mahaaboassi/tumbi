@@ -734,6 +734,11 @@ button:hover{
     animation: appeareLi 0.3s forwards linear;
     animation-delay: 0.3s;
     opacity: 0;
+    width: 100%;
+  }
+  .navbar ul.fixed-menu li a{
+    width: 100%;
+    display: flex;
   }
   @keyframes come {
     from{
