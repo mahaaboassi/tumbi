@@ -68,7 +68,7 @@ const Footer = ()=>{
                         </svg>
                 </div>))}</div>
                 <div className="flex gap-5 justify-center ">
-                    {socialMedia.map((e,idx)=><div key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
+                    {socialMedia.map((e,idx)=><div className="cursor-pointer" key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
                 </div>
 
             </div>
@@ -105,7 +105,7 @@ const Footer = ()=>{
                         </svg>
                 </div>))}</div>
                 <div className="flex icons gap-5 justify-center ">
-                    {socialMedia.map((e,idx)=><div key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
+                    {socialMedia.map((e,idx)=><div className="cursor-pointer" key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
                 </div>
 
             </div>

@@ -179,7 +179,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 15;
+  z-index: 40;
   cursor: pointer;
 }
 .next-icon, .prev-icon{
@@ -259,6 +259,21 @@
   width: 100%;
   border-radius: 8px;
 }
+.arrow-row{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+}
+.number-of-slide{
+  font-size: var(--font-size-xxs);
+  display: flex;
+  justify-content: end;
+}
 .card h4{
   font-family: var(--parisian);
   font-size: var(--font-size-s);
@@ -268,6 +283,58 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.content span{
+  color: var(--main-color);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+.room-details{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: #000000e4;
+  overflow-y: scroll;
+}
+.room-details::-webkit-scrollbar {
+  display: none;
+}
+.content-room-details{
+  display: flex;
+  margin-top: 5%;
+}
+.content-room-details img{
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title-icon{
+  font-size: var(--font-size-xxs);
+}
+.content-room-details h2{
+  font-family: var(--parisian);
+  font-size: var(--font-size-m);
+  color: var(--main-color);
+}
+.content-room-details p{
+  font-size: var(--font-size-xs);
+}
+.room-hightlights{
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
+  border-top: 1px solid var(--main-color);
+}
+.content-room-details span{
+  margin-left: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.first-details{
+  width: 50%;
 }
 /* Fill */
 .fill{
@@ -504,7 +571,19 @@ button:hover{
   .content-sign ul{
     font-size: var(--font-size-xs);
   }
-
+  /* Room */
+  .content-room-details h2{
+    font-size: var(--font-size-s);
+  }
+  .content-room-details p{
+    font-size: var(--font-size-xxs);
+  }
+  .content-room-details .room-hightlights{
+    font-size: var(--font-size-xs);
+  }
+  .content-room-details button{
+    font-size: var(--font-size-xs);
+  }
 
 }
 
@@ -518,6 +597,9 @@ button:hover{
   }
   .navbar button{
     font-size: var(--font-size-xs);
+  }
+  .menu-icon{
+    display: none;
   }
   /* About */
   .about{
@@ -569,6 +651,27 @@ button:hover{
     footer p{
       font-size: var(--font-size-xs);
     }
+     /* Room */
+     .content-room-details{
+      flex-direction: column;
+     }
+     .content-room-details img{
+      height: 150px;
+      object-fit: contain;
+     }
+     .content-room-details svg{
+        width: 30px;
+     }
+     .amenities{
+      font-size: var(--font-size-xxs);
+     }
+     .first-details{
+      width: 100%;
+    }
+    .number-of-slide{
+      justify-content: center;
+    }
+
 }
 
 @media (max-width:800px) {
@@ -612,6 +715,44 @@ button:hover{
     display: none;
     
   }
+  .navbar ul.fixed-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000e6;
+    justify-content: center;
+    padding: 40px 30px;
+    animation: come 0.3s forwards linear;
+    overflow: hidden;
+  }
+  .navbar ul.fixed-menu li{
+    animation: appeareLi 0.3s forwards linear;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  @keyframes come {
+    from{
+      height: 0;
+    }to{
+      height: 250px;
+    }
+  }
+  @keyframes appeareLi {
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
+  .menu-icon{
+    display: flex;
+  }
+
   .navbar svg{
     width: 25px;
   }
@@ -624,6 +765,9 @@ button:hover{
   /* Hero Section  */
   .Hero-section{
     height: 450px;
+  }
+  .Hero-section .full-logo{
+    width: 150px;
   }
   .fill h3{
     font-family: var(--parisian);

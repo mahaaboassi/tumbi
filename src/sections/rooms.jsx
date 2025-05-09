@@ -1,5 +1,5 @@
 import Heading from "../components/heading"
-import { dataRoom } from "../data/data"
+import { dataRoom, link } from "../data/data"
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,9 +7,19 @@ import 'swiper/css'; // core Swiper
 import 'swiper/css/navigation'; // optional modules
 
 import { Navigation , Autoplay } from 'swiper/modules';
+import { useState } from "react";
+import RoomDetails from "../components/roomDetails";
 
 const Rooms = ()=>{
-    return(<div className="py-16 px-5 sm:px-10 lg:px-24">
+  const [ room, setRoom ] = useState({})
+  const [ isOpen, setIsOpen ] = useState(false)
+  const viewDetails = (value)=>{
+    setRoom(value)
+    setIsOpen(true)
+  }
+  const closeView = ()=> setIsOpen(false)
+    return(<div id="rooms" className="py-16 px-5 sm:px-10 lg:px-24">
+        {isOpen && <RoomDetails closeView={closeView} room={room}/>}
         <Heading isWithArrows={true} isCenter={true} title={"Discover Our Rooms"} subTitle={"FEATURED ROOMS"} />
         <div className="card pt-16">
             <Swiper
@@ -50,8 +60,9 @@ const Rooms = ()=>{
                                     </svg>
                             </div>))}</div>
                             <h4>{e.name}</h4>
-                            <p>{e.first_line}</p>
-                            <div><button className="!w-full">Book Now</button></div>
+                            <p>{e.first_line.substring(0,80)} ...</p>
+                            <span onClick={()=>viewDetails(e)} >View Details</span>
+                            <div><a target="_blank" href={link} ><button className="!w-full">Book Now</button></a></div>
                         </div>
                     </SwiperSlide>))
                 }
