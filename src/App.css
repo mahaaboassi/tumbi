@@ -21,6 +21,9 @@
   cursor: pointer;
   transition: 0.3s;
 }
+.menu-icon{
+  display: none;
+}
 .background-fixed{
   position: fixed;
   top: 0;
@@ -598,9 +601,7 @@ button:hover{
   .navbar button{
     font-size: var(--font-size-xs);
   }
-  .menu-icon{
-    display: none;
-  }
+
   /* About */
   .about{
     flex-direction: column;
