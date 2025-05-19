@@ -71,7 +71,8 @@ const Navbar = ()=>{
                 </svg>
             </div>
             <div >
-                <button>Book Now</button>
+                <a className="email-button" href="mailto:reservations@tumbihotels.com">Book Now</a>
+                
             </div>
         </div>
         {isScroll && <div className="background-fixed"></div>}

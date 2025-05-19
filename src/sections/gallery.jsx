@@ -1,12 +1,16 @@
 import Heading from "../components/heading"
-import img_1 from "../assets/images/gallery (1).webp"
-import img_2 from "../assets/images/gallery (2).webp"
-import img_3 from "../assets/images/gallery (3).webp"
-import img_4 from "../assets/images/gallery (4).webp"
-import img_5 from "../assets/images/gallery (5).webp"
-import img_6 from "../assets/images/gallery (6).webp"
-import img_7 from "../assets/images/gallery (7).webp"
-import img_8 from "../assets/images/gallery (8).webp"
+import img_1 from "../assets/images/1_gallery.webp"
+import img_2 from "../assets/images/2_gallery.webp"
+import img_3 from "../assets/images/3_gallery.webp"
+import img_4 from "../assets/images/4_gallery.webp"
+import img_5 from "../assets/images/5_gallery.webp"
+import img_6 from "../assets/images/6_gallery.webp"
+import img_7 from "../assets/images/7_gallery.webp"
+import img_8 from "../assets/images/8_gallery.webp"
+import img_9 from "../assets/images/9_gallery.webp"
+import img_10 from "../assets/images/10_gallery.webp"
+import img_11 from "../assets/images/11_gallery.webp"
+import img_12 from "../assets/images/12_gallery.webp"
 import { useState } from "react"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,7 +23,7 @@ import { Navigation  } from 'swiper/modules';
 
 const Gallery = () => {
     const [ isOverlay, setIsOverlay ] = useState(false)
-    const [images, setImages] = useState([img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8])
+    const [images, setImages] = useState([img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8,img_9 ,img_10, img_11, img_12])
     const openOverlay = (img)=>{
         setImages([img, ...images])
         setIsOverlay(true)
@@ -41,7 +45,7 @@ const Gallery = () => {
     const nextSlider = ()=> {document.querySelector(".gallery .swiper-button-next").click()}
         
     return(<div id="gallery" className="py-16 px-5 sm:px-10 lg:px-24 gallery">
-        <Heading isCenter={true} subTitle={"PHOTOS"} title={"Tumbi’s Gallery"} />
+        <Heading isCenter={true} subTitle={"PHOTOS"} title={"TUMBI Gallery"} />
         {isOverlay && <div className="overlay-gallery ">
             <div onClick={()=>setIsOverlay(false)} className="close-icon">{close}</div>
             <div onClick={lastSlider} className="prev-icon">{arrow}</div>

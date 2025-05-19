@@ -37,7 +37,7 @@ const Footer = ()=>{
     return<div>
 
          <footer className="px-5 sm:px-10 lg:px-24 py-10 relative" >
-            <div className="lines">
+            {/* <div className="lines">
                     {
                         [...Array(500)].map((_,idx)=>{
                             const height = Math.floor(Math.random() * 60) + 300;
@@ -48,7 +48,7 @@ const Footer = ()=>{
                             }} className="line" key={`Lines_${idx}`}></div>
                         })
                     }
-            </div>
+            </div> */}
             <div className="w-full first flex flex-col justify-center">
                 <h5>Address</h5>
                 <p>Palm Jumeirah Road, Dubai, U.A.E</p>
@@ -68,15 +68,17 @@ const Footer = ()=>{
                         </svg>
                 </div>))}</div>
                 <div className="flex gap-5 justify-center ">
-                    {socialMedia.map((e,idx)=><div className="cursor-pointer" key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
+                    {socialMedia.map((e,idx)=><div className="cursor-pointer social-icon" key={`Social_Media_${e.name}_${idx}`}>
+                        <a target="_blank" href={e.link}>{e.icon}</a>
+                    </div>)}
                 </div>
 
             </div>
             <div className="w-full third flex items-center contact-footer justify-center ">
                 <div>
                     <h5>Contact Us</h5>
-                    <p>T. +971 54 512 5743</p>
-                    <p>M. info@tumbihotels.com</p>
+                    <p>T.  04 871 9900 | 800 (TUMBI) 88642</p>
+                    <p>M.  reservations@tumbihotels.com</p>
                 </div>
             </div>
 
@@ -86,8 +88,8 @@ const Footer = ()=>{
                 <p>Palm Jumeirah Road, Dubai, U.A.E</p>
                 <div className="pt-2">
                     <h5>Contact Us</h5>
-                    <p>T. +971 54 512 5743</p>
-                    <p>M. info@tumbihotels.com</p>
+                    <p>T. 04 871 9900 | 800 (TUMBI) 88642</p>
+                    <p>M. reservations@tumbihotels.com</p>
                 </div>
             </div>
             <div className="w-full logo-footer small">
@@ -104,8 +106,10 @@ const Footer = ()=>{
                         </defs>
                         </svg>
                 </div>))}</div>
-                <div className="flex icons gap-5 justify-center ">
-                    {socialMedia.map((e,idx)=><div className="cursor-pointer" key={`Social_Media_${e.name}_${idx}`}>{e.icon}</div>)}
+                <div className="flex  icons gap-5 justify-center ">
+                    {socialMedia.map((e,idx)=><div className="cursor-pointer social-icon" key={`Social_Media_${e.name}_${idx}`}>
+                        <a target="_blank" href={e.link}>{e.icon}</a>
+                    </div>)}
                 </div>
 
             </div>
@@ -113,7 +117,7 @@ const Footer = ()=>{
         
         </footer>
     <div className="final-footer py-3">
-        © 2025 by ArizGlobal
+        © 2025 by <a target="_blank" href="https://arizglobal.com" >Ariz Global</a>
     </div>
     </div>
 }

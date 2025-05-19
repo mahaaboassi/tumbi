@@ -82,7 +82,7 @@ const RoomDetails = ({room,closeView})=>{
         <p>{room.second_line}</p>
         <p>{room.third_line}</p>
         <div className="room-hightlights py-4">Room highlights : <span>( {room.room_hightlites} )</span></div>
-        <div><a target="_blank" href={link}><button>Book Now</button></a></div>
+        <div><a className="email-button" href="mailto:reservations@tumbihotels.com">Book Now</a></div>
       </div>
     </div>
 

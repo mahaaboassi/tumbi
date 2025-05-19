@@ -62,7 +62,7 @@ const Rooms = ()=>{
                             <h4>{e.name}</h4>
                             <p>{e.first_line.substring(0,80)} ...</p>
                             <span onClick={()=>viewDetails(e)} >View Details</span>
-                            <div><a target="_blank" href={link} ><button className="!w-full">Book Now</button></a></div>
+                            <div><a className="email-button" href="mailto:reservations@tumbihotels.com">Book Now</a></div>
                         </div>
                     </SwiperSlide>))
                 }

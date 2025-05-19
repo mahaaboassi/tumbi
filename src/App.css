@@ -15,7 +15,7 @@
 .navbar ul{
   display: flex;
   font-family: var(--parisian);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .navbar ul li{
   cursor: pointer;
@@ -219,8 +219,8 @@
   text-transform: uppercase;
 }
 .heading h2{
-  font-family: var(--mogen);
-  font-size: var(--font-size-m);
+  font-family: var(--parisian);
+  font-size: var(--font-size-l);
   text-transform: capitalize;
 }
 .align{
@@ -364,7 +364,7 @@
   font-size: var(--font-size-m);
 }
 .fill h4{
-  font-family: var(--mogen);
+  font-family: var(--parisian);
   font-size: var(--font-size-m);
 }
 .main-color{
@@ -467,9 +467,9 @@
   overflow: hidden;
 }
 .content-sign h4{
-  font-family: var(--mogen);
+  font-family: var(--parisian);
   color: var(--main-color);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-l);
 }
 .content-sign ul{
   font-family: var(--parisian);
@@ -535,7 +535,7 @@ footer p{
 p{
   font-size: var(--font-size-xs);
 }
-button{
+button,.email-button{
   background-color: var(--green-color );
   font-family: var(--parisian);
   font-size: 1.5rem;
@@ -545,7 +545,7 @@ button{
   text-transform: capitalize;
   width: fit-content;
 }
-button:hover{
+button:hover, .email-button:hover{
   background-color: var(--light-color );
   color: var(--green-color);
 }
@@ -556,7 +556,8 @@ button:hover{
     font-size: var(--font-size-xs);
   }
   .heading h2{
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
+    line-height: 2.3rem;
   }
   p{
     font-size: var(--font-size-xxs);
@@ -569,7 +570,7 @@ button:hover{
     height: 350px;
   }
   .content-sign h4{
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
   }
   .content-sign ul{
     font-size: var(--font-size-xs);
@@ -584,7 +585,7 @@ button:hover{
   .content-room-details .room-hightlights{
     font-size: var(--font-size-xs);
   }
-  .content-room-details button{
+  .content-room-details button,.email-button{
     font-size: var(--font-size-xs);
   }
 
@@ -598,7 +599,7 @@ button:hover{
   .navbar svg{
     width: 35px;
   }
-  .navbar button{
+  .navbar button, .email-button{
     font-size: var(--font-size-xs);
   }
 
@@ -608,11 +609,9 @@ button:hover{
 
   }
   .fill h3{
-    font-family: var(--parisian);
     font-size: var(--font-size-s);
   }
   .fill h4{
-    font-family: var(--mogen);
     font-size: var(--font-size-s);
   }
   .content-sign ul{
@@ -706,6 +705,21 @@ button:hover{
     display: flex;
     justify-content: center;
   }
+  .content-sign h4{
+    font-size: var(--font-size-s);
+  }
+}
+.social-icon{
+  transition: 0.3s;
+}
+.social-icon:hover{
+  transform: scale(1.2);
+}
+.final-footer a{
+  transition: 0.3s;
+}
+.final-footer a:hover{
+  color: var(--green-color);
 }
 @media (max-width:500px) {
   /* navbar */
@@ -762,7 +776,7 @@ button:hover{
   .navbar svg{
     width: 25px;
   }
-  .navbar button{
+  .navbar button,.email-button{
     font-size: var(--font-size-xs);
   } 
   .background-fixed{
@@ -776,11 +790,9 @@ button:hover{
     width: 150px;
   }
   .fill h3{
-    font-family: var(--parisian);
     font-size: var(--font-size-xs);
   }
   .fill h4{
-    font-family: var(--mogen);
     font-size: var(--font-size-xs);
   }
 
