@@ -693,7 +693,10 @@ button:hover, .email-button:hover{
   .navbar button, .email-button{
     font-size: var(--font-size-xs);
   }
-
+  /* heading */
+  .heading h2{
+    text-align: center;
+  }
   /* About */
   .about{
     flex-direction: column;
