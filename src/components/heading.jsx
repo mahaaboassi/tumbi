@@ -3,11 +3,11 @@ const Heading = ({title, subTitle, isCenter, isWithArrows})=>{
     <path d="M0.589966 10.59L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.59Z" fill="white"/>
     </svg>
     const lastSlider = ()=>{
-        document.querySelector(".swiper-button-prev").click()
+        document.querySelector("#rooms .swiper-button-prev").click()
         
     }
     const nextSlider = ()=>{
-        document.querySelector(".swiper-button-next").click()
+        document.querySelector("#rooms .swiper-button-next").click()
         
     }
     return<div  className={`heading ${isCenter?"center-heading":""}`}>
