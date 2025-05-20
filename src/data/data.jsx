@@ -71,17 +71,15 @@ const amenities =  [{
 
 
 
-export const categories = [{
-    name : "Luxury Accomadiation"
-},{
-    name : "Exclusive Retreats"
-},{
-    name : "Premium Hospitality"
-},{
-    name : "Elegant Stays"
-},{
-    name : "Unparalleled Comfort"
-}]
+export const categories = [
+  {name : "Luxury Accomadiation"},
+  {name : "Exclusive Retreats"},
+  {name : "Premium Hospitality"},
+  {name : "Elegant Stays"},
+  {name : "Unparalleled Comfort"},
+  { name: "Grand Stays" },
+  { name: "Tranquil Luxury" }
+]
 
 
 export const dataRoom = [{

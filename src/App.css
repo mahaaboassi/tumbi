@@ -80,17 +80,22 @@
 
 /* Categories */
 .category{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  animation: upDiv 0.5s linear forwards;
 }
 .card-cat{
   border: 1px solid var(--main-color);
-  font-family: var(--parisian);
-  font-size: var(--font-size-s);
+  /* font-family: var(--); */
+  font-size: 1rem;
   border-radius: 10px;
-  animation: upDiv 0.5s linear forwards;
+  
   text-transform: capitalize;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .cloudy-container{
   position: relative;
@@ -203,19 +208,10 @@
   transform: rotate(-180deg);
 }
 
-
-
-
-
-
-
-
-
-
 /* Heading */
 .heading h3{
-  font-family: var(--parisian);
-  font-size: var(--font-size-s);
+  /* font-family: var(--parisian); */
+  font-size: var(--font-size-xs);
   text-transform: uppercase;
 }
 .heading h2{
@@ -359,6 +355,50 @@
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.3) 100%);
   z-index: 2;
 }
+
+.without-animation h2, .without-animation p, .without-animation a, .without-animation img{
+  opacity: 0;
+}
+.animation-text img{
+  animation: changeScale 1s forwards linear;
+  opacity: 0;
+}
+@keyframes changeScale {
+    0%{
+      transform: scale(0.3);
+      opacity: 0;
+    }50%{
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+.animation-text h2{
+  animation: upOpacityDiv 0.3s forwards linear;
+   opacity: 0;
+}
+.animation-text p{
+  animation: upOpacityDiv 0.3s forwards linear;
+  animation-delay: 0.3;
+  opacity: 0;
+}
+.animation-text a{
+  animation: upOpacityDiv 0.5s forwards linear;
+  animation-delay: 0.6;
+  opacity: 0;
+}
+@keyframes upOpacityDiv {
+    from{
+      transform: translateY(50px);
+      opacity: 0;
+    }to{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
 .fill h3{
   font-family: var(--parisian);
   font-size: var(--font-size-m);
@@ -410,6 +450,7 @@
 }
 .resturant img, .resturant-reverse img{
   object-fit: contain;
+  height: 350px;
 }
 .resturant h2, .resturant-reverse h2{
   font-family: var(--parisian);
@@ -531,6 +572,39 @@ footer p{
 .first-small, .small{
   display: none;
 }
+.divider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.divider h5{
+  position: absolute;
+  background-color:var(--dark-color);
+  font-family: var(--parisian);
+  font-size: var(--font-size-m);
+  padding: 0 10px;
+  color: var(--main-color);
+  z-index: 1;
+
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s forwards;
+}
+.the-line{
+  width: 100%;
+  height: 0.3px;
+  background-color: var(--main-color);
+}
 /* Button */
 p{
   font-size: var(--font-size-xs);
@@ -549,7 +623,24 @@ button:hover, .email-button:hover{
   background-color: var(--light-color );
   color: var(--green-color);
 }
-
+/* Social Icon */
+.social-icon{
+  transition: 0.3s;
+}
+.social-icon:hover{
+  transform: scale(1.2);
+}
+.final-footer a{
+  transition: 0.3s;
+}
+.final-footer a:hover{
+  color: var(--green-color);
+}
+@media (max-width:1270px) {
+  .category{
+    justify-content: center;
+  }
+}
 @media (max-width:1200px) {
   /* Heading */
   .heading h3{
@@ -564,7 +655,7 @@ button:hover, .email-button:hover{
   }
   /* Category */
   .card-cat{
-    font-size: var(--font-size-xs);
+    font-size: 1rem;
   }
   .card-sign{
     height: 350px;
@@ -607,6 +698,20 @@ button:hover, .email-button:hover{
   .about{
     flex-direction: column;
 
+  }
+  .about img{
+    width: 100%;
+    height: 400px;
+  }
+  .about .sub-title{
+      display: flex;
+      justify-content: center;
+  }
+  .about h2,  .about a{
+    margin: auto;
+  }
+  .about p{
+    text-align: center;
   }
   .fill h3{
     font-size: var(--font-size-s);
@@ -708,19 +813,9 @@ button:hover, .email-button:hover{
   .content-sign h4{
     font-size: var(--font-size-s);
   }
+
 }
-.social-icon{
-  transition: 0.3s;
-}
-.social-icon:hover{
-  transform: scale(1.2);
-}
-.final-footer a{
-  transition: 0.3s;
-}
-.final-footer a:hover{
-  color: var(--green-color);
-}
+
 @media (max-width:500px) {
   /* navbar */
   .navbar{
@@ -795,6 +890,9 @@ button:hover, .email-button:hover{
   .fill h4{
     font-size: var(--font-size-xs);
   }
+  .divider h5{
+    font-size: var(--font-size-s);
+  }
 
 }
 @media (max-width:350px) {
@@ -811,5 +909,5 @@ button:hover, .email-button:hover{
   .icons{
     gap:5px
   }
- 
+
 }

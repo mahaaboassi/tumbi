@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react"
 import { socialMedia } from "../data/data"
 
 const Footer = ()=>{
@@ -34,7 +35,55 @@ const Footer = ()=>{
     <path d="M135.27 169.82V157.92H136.53V168.74H143.2V169.83H135.27V169.82Z" fill="#B99855"/>
     <path d="M149.11 169.93C148.23 169.93 147.38 169.79 146.57 169.5C145.76 169.21 145.13 168.84 144.69 168.39L145.18 167.42C145.6 167.83 146.16 168.17 146.87 168.45C147.58 168.73 148.32 168.87 149.11 168.87C149.86 168.87 150.47 168.78 150.94 168.59C151.41 168.4 151.76 168.15 151.98 167.83C152.2 167.51 152.31 167.16 152.31 166.78C152.31 166.32 152.18 165.94 151.91 165.66C151.64 165.38 151.29 165.15 150.86 164.99C150.43 164.83 149.95 164.68 149.43 164.56C148.91 164.44 148.39 164.3 147.87 164.16C147.35 164.02 146.87 163.83 146.43 163.59C145.99 163.35 145.64 163.04 145.37 162.65C145.1 162.26 144.97 161.74 144.97 161.11C144.97 160.52 145.12 159.98 145.44 159.49C145.75 159 146.23 158.6 146.88 158.3C147.53 158 148.35 157.85 149.36 157.85C150.03 157.85 150.69 157.94 151.35 158.13C152.01 158.32 152.57 158.58 153.05 158.91L152.63 159.91C152.12 159.57 151.58 159.32 151.01 159.16C150.44 159 149.88 158.92 149.35 158.92C148.64 158.92 148.05 159.02 147.58 159.21C147.11 159.4 146.77 159.66 146.55 159.98C146.33 160.3 146.22 160.67 146.22 161.08C146.22 161.54 146.35 161.92 146.62 162.2C146.89 162.48 147.24 162.7 147.67 162.86C148.11 163.02 148.59 163.16 149.11 163.28C149.63 163.4 150.15 163.54 150.67 163.69C151.19 163.84 151.66 164.03 152.1 164.26C152.54 164.49 152.89 164.8 153.16 165.19C153.42 165.58 153.56 166.08 153.56 166.7C153.56 167.28 153.4 167.81 153.08 168.31C152.76 168.8 152.28 169.2 151.63 169.5C150.97 169.78 150.13 169.93 149.11 169.93Z" fill="#B99855"/>
     </svg>
-    return<div>
+    const targetRef = useRef(null)
+    const [ isTrigger, setIsTrigger ] = useState(false)
+    useEffect(() => {
+        const handleIntersection = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            setIsTrigger(true); // Set state to true when the div is in view
+            } else{
+                setIsTrigger(false)
+            }
+        });
+        };
+        const observer = new IntersectionObserver(handleIntersection, {
+        root: null, // Observe with respect to the viewport
+        rootMargin: '0px',
+        threshold: 0.5, // Trigger when 50% of the div is visible
+        });
+        // Start observing the target div
+        if (targetRef.current) {
+        observer.observe(targetRef.current);
+        }
+
+        // Cleanup observer on component unmount
+        return () => {
+        if (targetRef.current) observer.unobserve(targetRef.current);
+        };
+    }, []);
+      const text = "Keep In Touch";
+
+    return<div ref={targetRef}>
+        <div className={`relative divider py-16`}>
+           <h5
+                className={`left-5 sm:left-10 lg:left-24 `}
+                >
+                {text.split("").map((letter, index) => (
+                    <span
+                    key={index}
+                    className={`inline-block ${
+                        isTrigger ? "animate-fade-in" : ""
+                    }`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                    {letter === " " ? "\u00A0" : letter}
+                    </span>
+                ))}
+                </h5>
+            <div className="the-line"></div>
+
+        </div>
 
          <footer className="px-5 sm:px-10 lg:px-24 py-10 relative" >
             {/* <div className="lines">
