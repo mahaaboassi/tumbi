@@ -414,6 +414,7 @@
 }
 .resturant img, .resturant-reverse img{
   object-fit: contain;
+  height: 350px;
 }
 .resturant h2, .resturant-reverse h2{
   font-family: var(--parisian);

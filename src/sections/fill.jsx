@@ -30,10 +30,10 @@ const Fill = ()=>{
             <div id="dining" className="py-16 px-5 sm:px-10 lg:px-24">
                 <Heading isCenter={true} subTitle={"SERVICES"} title={"Dining and Drinks"} />
                 <div className="pt-16 resturant">
-                    <div className="w-full flex justify-center">
+                    <div className="w-full items-center flex justify-center">
                         <img src={deatox} alt="Deatox" />
                     </div>
-                    <div className="w-full flex flex-col gap-5">
+                    <div className="w-full  flex flex-col gap-5">
                         <h2>dEATox</h2>
                         <p>Welcome to dEATox, where health and flavor come together in perfect harmony. Whether you're in the mood for a quick bite or a relaxing drink, our cozy spot offers a delightful multi-cuisine à la carte dining experience. Indulge in our delectable selection of healthy foods, detox options, freshly pressed juices, specialty mocktails, and indulgent pastries and cakes, all crafted with the finest ingredients and attention to detail. With every dish, we provide calorie counts so you can make mindful choices. The tranquil ambiance is designed to soothe your senses, creating the perfect atmosphere to unwind and rejuvenate. Savor each bite and sip, and let dEATox nourish body, mind and soul.</p>
                         <a target="_blank" href="https://tumbihotels.com/deatox"><div className="explore flex items-center gap-2">explore the menu {arrow}</div> </a>
@@ -46,7 +46,7 @@ const Fill = ()=>{
                         <p>For those with specific tastes or dietary needs, the restaurant also offers an à la carte menu, ensuring that each guest can find something perfectly suited to their preferences. The atmosphere is further elevated by the stunning surroundings of the Dubai Palm Jumeirah, where diners can enjoy their meals while feeling the gentle sea breeze and soaking in the radiant sunshine. Whether you're looking for a leisurely meal or a special dining occasion, Afia promises a memorable experience for all who visit.</p>
                         <a target="_blank" href="https://tumbihotels.com/afia"><div className="explore flex items-center gap-2">explore the menu {arrow}</div></a>
                     </div>
-                    <div className="w-full flex justify-center">
+                    <div className="w-full items-center  flex justify-center">
                         <img src={afia} alt="Afia" />
                     </div>
                     
