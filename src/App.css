@@ -679,6 +679,10 @@ button:hover, .email-button:hover{
   .content-room-details button,.email-button{
     font-size: var(--font-size-xs);
   }
+  /* divider */
+  .divider h5{
+    font-size: var(--font-size-s);
+  }
 
 }
 
@@ -792,7 +796,19 @@ button:hover, .email-button:hover{
   
 }
 @media (max-width: 700px) {
-    .first, .second , .third{
+  .divider h5{
+    font-size: var(--font-size-s);
+  }
+  .final-footer{
+    font-size: var(--font-size-xs);
+  }
+  footer h5{
+    font-size: var(--font-size-xs);
+  }
+  footer p{
+    font-size: var(--font-size-xxs);
+  }
+  .first, .second , .third{
     display: none;
   }
   .first-small, .small{
