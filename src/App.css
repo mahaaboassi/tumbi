@@ -15,7 +15,7 @@
 .navbar ul{
   display: flex;
   font-family: var(--parisian);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 .navbar ul li{
   cursor: pointer;
@@ -210,13 +210,13 @@
 
 /* Heading */
 .heading h3{
-  /* font-family: var(--parisian); */
-  font-size: var(--font-size-xs);
+  font-family: var(--parisian);
+  font-size: var(--font-size-s);
   text-transform: uppercase;
 }
 .heading h2{
-  font-family: var(--parisian);
-  font-size: var(--font-size-l);
+  font-family: var(--mogen);
+  font-size: var(--font-size-m);
   text-transform: capitalize;
 }
 .align{
@@ -275,7 +275,7 @@
 }
 .card h4{
   font-family: var(--parisian);
-  font-size: var(--font-size-s);
+  font-size: 1.2rem;
 }
 .content{
   width: 100%;
@@ -316,7 +316,7 @@
 }
 .content-room-details h2{
   font-family: var(--parisian);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
   color: var(--main-color);
 }
 .content-room-details p{
@@ -324,7 +324,7 @@
 }
 .room-hightlights{
   font-family: var(--parisian);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   border-top: 1px solid var(--main-color);
 }
 .content-room-details span{
@@ -454,12 +454,12 @@
 }
 .resturant h2, .resturant-reverse h2{
   font-family: var(--parisian);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-m);
 }
 .explore{
   font-family: var(--parisian);
   color: var(--main-color);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   text-transform: capitalize;
   transition: 0.3s;
   cursor: pointer;
@@ -514,7 +514,8 @@
 }
 .content-sign ul{
   font-family: var(--parisian);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
 }
 .card-sign:has(.content-sign:hover) {
   transform: translateY(-30px);
@@ -532,7 +533,7 @@
 .location h4{
   font-family: var(--parisian);
   color: var(--main-color);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
   cursor: pointer;
   position: relative;
 
@@ -547,19 +548,20 @@
   background-color: var(--main-color);
 }
 .location ul{
-  font-size: var(--font-size-s);
-  font-family: var(--parisian);
+  font-size: var(--font-size-xs);
 }
 
 
 /* Footer */
 footer{
   display: flex;
-  font-family: var(--parisian);
-  font-size: var(--font-size-m);
   overflow: hidden;
 }
 footer p{
+  font-size: var(--font-size-xs);
+}
+footer h5{
+   font-family: var(--parisian);
   font-size: var(--font-size-s);
 }
 .final-footer{
@@ -612,7 +614,7 @@ p{
 button,.email-button{
   background-color: var(--green-color );
   font-family: var(--parisian);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 5px 10px;
   cursor: pointer;
   transition: 0.3s;
@@ -647,7 +649,7 @@ button:hover, .email-button:hover{
     font-size: var(--font-size-xs);
   }
   .heading h2{
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     line-height: 2.3rem;
   }
   p{
@@ -667,14 +669,12 @@ button:hover, .email-button:hover{
     font-size: var(--font-size-xs);
   }
   /* Room */
-  .content-room-details h2{
-    font-size: var(--font-size-s);
-  }
+
   .content-room-details p{
     font-size: var(--font-size-xxs);
   }
   .content-room-details .room-hightlights{
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-xxs);
   }
   .content-room-details button,.email-button{
     font-size: var(--font-size-xs);
@@ -685,7 +685,7 @@ button:hover, .email-button:hover{
 @media (max-width:900px) {
   /* navbar */
   .navbar ul{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .navbar svg{
     width: 35px;
@@ -723,7 +723,7 @@ button:hover, .email-button:hover{
     font-size: var(--font-size-s);
   }
   .content-sign ul{
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xxs  );
   }
   .container-sign{
     flex-direction: column;
@@ -743,10 +743,10 @@ button:hover, .email-button:hover{
       min-height: 300px;
     }
     .location h4{
-      font-size: var(--font-size-s);
+      font-size: var(--font-size-xs);
     }
     .location ul{
-      font-size: var(--font-size-xs);
+      font-size: var(--font-size-xxs);
     }
     /* footer */
     .logo-footer .big-logo{
@@ -791,6 +791,18 @@ button:hover, .email-button:hover{
   }
   
 }
+@media (max-width: 700px) {
+    .first, .second , .third{
+    display: none;
+  }
+  .first-small, .small{
+    display: block;
+  }
+  .first-small{
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (max-width:600px) {
   .grid-gal{
     flex-direction: column;
@@ -803,16 +815,7 @@ button:hover, .email-button:hover{
   .location iframe{
     min-height: 250px;
   }
-  .first, .second , .third{
-    display: none;
-  }
-  .first-small, .small{
-    display: block;
-  }
-  .first-small{
-    display: flex;
-    justify-content: center;
-  }
+
   .content-sign h4{
     font-size: var(--font-size-s);
   }
@@ -896,7 +899,14 @@ button:hover, .email-button:hover{
   .divider h5{
     font-size: var(--font-size-s);
   }
-
+  
+}
+@media (max-width:420px) {
+  /* footer */
+    footer{
+      flex-direction: column-reverse;
+      gap:20px
+    }
 }
 @media (max-width:350px) {
   
@@ -912,5 +922,9 @@ button:hover, .email-button:hover{
   .icons{
     gap:5px
   }
+  /* Room */
+  .content-room-details h2{
+    font-size: var(--font-size-xs);
+  } 
 
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 @font-face {
   font-family: 'parisian';
-  src: url('./assets/fonts/Parisian.ttf') format('truetype');
+  src: url('./assets/fonts/parisian.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
