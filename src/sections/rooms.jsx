@@ -23,12 +23,12 @@ const Rooms = ()=>{
         <Heading isWithArrows={true} isCenter={true} title={"Discover Our Rooms"} subTitle={"FEATURED ROOMS"} />
         <div className="card pt-16">
             <Swiper
-                modules={[Navigation, Autoplay]}
+                modules={[Navigation]}
                 navigation
-                autoplay={{
-                    delay: 3000,       // Slide every 3 seconds
-                    disableOnInteraction: false, // Keep autoplay after user interaction
-                  }}
+                // autoplay={{
+                //     delay: 3000,       // Slide every 3 seconds
+                //     disableOnInteraction: false, // Keep autoplay after user interaction
+                //   }}
                 spaceBetween={20}
                 slidesPerView={3}
                 breakpoints={{
@@ -45,7 +45,7 @@ const Rooms = ()=>{
                   }}>     
                 {
                     dataRoom.map((e,idx)=>(<SwiperSlide key={`Rooms_Slider_${e.name}_${idx}`}>
-                        <div className={`content`} >
+                        <div className={`content `} >
                             <img src={e.img} alt={e.name} />
                             <div className="flex gap-1">{[1,2,3,4,5].map((_,i)=>(<div key={`Stars_${i}_${e.name}`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
@@ -62,7 +62,7 @@ const Rooms = ()=>{
                             <h4>{e.name}</h4>
                             <p>{e.first_line.substring(0,80)} ...</p>
                             <span onClick={()=>viewDetails(e)} >View Details</span>
-                            <div><a className="email-button" href="mailto:reservations@tumbihotels.com">Book Now</a></div>
+                            <div className="!w-full email-button text-center "><a  href="mailto:reservations@tumbihotels.com">Book Now</a></div>
                         </div>
                     </SwiperSlide>))
                 }
