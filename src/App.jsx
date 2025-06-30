@@ -1,30 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/navbar'
-import About from './sections/about'
-import Category from './sections/category'
-import Fill from './sections/fill'
-import Footer from './sections/footer'
-import Gallery from './sections/gallery'
-import HeroSection from './sections/hero'
-import Location from './sections/location'
-import Rooms from './sections/rooms'
-import Signature from './sections/signature'
+import Home from './pages/home/page'
+import QR from './pages/QR/qr'
 
 function App() {
 
-  return (
-    <>
-    <Navbar/>
-    <HeroSection/>
-    <Category/>
-    <About/>
-    <Rooms/>
-    <Fill/>
-    <Signature/>
-    <Gallery/>
-    <Location/>
-    <Footer/>
-    </>
+  return (<BrowserRouter>
+    <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path="/qr" element={<QR/>} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
